@@ -10,7 +10,7 @@ import AppMain from './components/AppMain.vue';
 if (window.document.body.clientWidth > 1200) {
   router.push('/pc');
 } else {
-  router.push('/h5');
+  window.location.href = 'https://bigo-e.vercel.app/';
 }
 </script>
 
