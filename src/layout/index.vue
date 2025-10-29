@@ -5,36 +5,13 @@
 </template>
 
 <script setup lang="ts">
+import router from '../router/index';
 import AppMain from './components/AppMain.vue';
-// import { useAppStore } from '@/store/modules/app';
-// import { useSettingsStore } from '@/store/modules/settings';
-
-// const settingsStore = useSettingsStore();
-// const theme = computed(() => settingsStore.theme);
-// const sidebar = computed(() => useAppStore().sidebar);
-// const device = computed(() => useAppStore().device);
-
-// const classObj = computed(() => ({
-//   hideSidebar: !sidebar.value.opened,
-//   openSidebar: sidebar.value.opened,
-//   withoutAnimation: sidebar.value.withoutAnimation,
-//   mobile: device.value === 'mobile'
-// }));
-
-// const { width } = useWindowSize();
-// const WIDTH = 992; // refer to Bootstrap's responsive design
-
-// watchEffect(() => {
-//   if (device.value === 'mobile') {
-//     useAppStore().closeSideBar({ withoutAnimation: false });
-//   }
-//   if (width.value - 1 < WIDTH) {
-//     useAppStore().toggleDevice('mobile');
-//     useAppStore().closeSideBar({ withoutAnimation: true });
-//   } else {
-//     useAppStore().toggleDevice('desktop');
-//   }
-// });
+if (window.document.body.clientWidth > 1200) {
+  router.push('/pc');
+} else {
+  router.push('/h5');
+}
 </script>
 
 <style lang="scss" scoped>

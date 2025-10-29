@@ -1,6 +1,18 @@
 <template>
   <div class="wrapper-4">
-    <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/HA2ZTZ8BcXgAAAAAgBAAAAgAejH3AQBr/original" class="game-banner-image" />
+    <div class="game-banner-image">
+      <el-carousel arrow="always" style="width: 100%; height: 100%">
+        <el-carousel-item v-for="item in 4" :key="item">
+          <div class="banneritem">
+            <div class="text">
+              <div class="btn"></div>
+            </div>
+            <div class="mask"></div>
+            <div class="canyu">立即参与</div>
+          </div>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <div class="game-section-container">
       <div class="game-list-container">
         <div class="game-category-header">
@@ -61,13 +73,77 @@ export default {};
   justify-content: space-between;
   padding-bottom: 60px;
 }
+:deep(.el-carousel__container) {
+  height: 384px !important;
+}
 
+:deep(.el-carousel__button) {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #fff !important;
+  border-radius: 4px !important;
+}
+:deep(.is-active .el-carousel__button) {
+  width: 16px !important;
+  background-color: #ff5b2b !important;
+}
 .game-banner-image {
   border-radius: 6px;
   flex-shrink: 0;
   flex: 24;
   height: 384px;
   margin-right: 16px;
+  .banneritem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/images/banner.png') no-repeat center;
+    background-size: cover;
+    .text {
+      position: absolute;
+      bottom: 56px;
+      left: 61px;
+      width: 555px;
+      height: 66px;
+      background: url('../../assets/images/text.png') no-repeat center;
+      background-size: 100% 100%;
+      z-index: 3;
+      .btn {
+        position: absolute;
+        top: 0px;
+        right: 155px;
+        width: 72px;
+        height: 20px;
+        background: url('../../assets/images/huodong.png') no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+    .mask {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 210px;
+      background: url('../../assets/images/mask.png') no-repeat center;
+      background-size: 100% 100%;
+      z-index: 2;
+    }
+    .canyu {
+      z-index: 3;
+      position: absolute;
+      right: 45px;
+      bottom: 70px;
+      width: 111px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 20px;
+      background: #ff5b2b;
+      font-weight: 600;
+      font-size: 16px;
+      color: #ffffff;
+    }
+  }
 }
 
 .game-section-container {

@@ -6,22 +6,16 @@ import i18n from '@/lang/index';
 // 公共路由
 export const constantRoutes: RouteRecordRaw[] = [
   {
-    path: '/401',
-    component: () => import('@/views/error/401.vue'),
-    hidden: true
+    path: '/h5',
+    component: () => import('@/views/h5/index.vue')
+  },
+  {
+    path: '/pc',
+    component: () => import('@/views/index.vue')
   },
   {
     path: '',
-    redirect: '/index',
-    component: Layout,
-    children: [
-      {
-        path: '/index',
-        component: () => import('@/views/index.vue'),
-        name: 'Index',
-        meta: { title: i18n.global.t('route.dashboard'), icon: 'dashboard', affix: true }
-      }
-    ]
+    component: Layout
   }
 ];
 

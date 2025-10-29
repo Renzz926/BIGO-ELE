@@ -34,6 +34,7 @@
             <div class="game-header">
               <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/_pwsQKAL4_sAAAAAM4AAAAgAejH3AQBr/original" class="result-icon" />
               <span class="result-game-name"> GREEDY </span>
+              <div class="line"></div>
             </div>
             <div class="game-header">
               <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/WZ3SSa4Y600AAAAAJFAAAAgAejH3AQBr/original" class="result-icon" />
@@ -209,6 +210,16 @@ export default {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  .line {
+    position: absolute;
+    bottom: -17px;
+    left: -83px;
+    width: 270px;
+    height: 12px;
+    background: url('../../assets/images/line.png') no-repeat center;
+    background-color: #fff;
+    background-size: 100% 100%;
+  }
 }
 
 .game-name {
@@ -429,6 +440,7 @@ export default {
 
 .result-table-row {
   margin-top: 16px;
+  padding-left: 16px;
   display: flex;
   flex-direction: row;
 }
@@ -450,8 +462,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 18px 22px 18px 20px;
-  margin-left: 68px;
+  padding: 18px 24px 18px 20px;
+  margin-left: 52px;
 }
 
 .draw-time {
