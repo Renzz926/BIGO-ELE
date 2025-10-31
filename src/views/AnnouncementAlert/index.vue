@@ -2,13 +2,15 @@
   <div class="wrapper-3">
     <div type="warning" class="warning-banner">
       <div class="icon"></div>
-      BINGO公告：全新食物主题轮盘上线，更多倍率奖励等你来赢！首次登录即送500INR虚拟货币，快来参与吧~
+      {{ t('announcement.banner') }}
     </div>
   </div>
 </template>
 
-<script lang="ts">
-export default {};
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

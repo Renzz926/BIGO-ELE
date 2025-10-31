@@ -18,7 +18,7 @@ import plugins from './plugins/index'; // plugins
 // svg图标
 import 'virtual:svg-icons-register';
 import ElementIcons from '@/plugins/svgicon';
-
+import i18n from '@/lang/index';
 // permission control
 import './permission';
 
@@ -27,7 +27,7 @@ const updatePageTexts = () => {
   const titleElement = document.getElementById('app-title');
   const loadingElement = document.getElementById('loading-text');
 };
-
+i18n.global.locale = i18n.global.locale;
 // 初始化时设置文本
 updatePageTexts();
 
@@ -38,6 +38,7 @@ ElDialog.props.closeOnClickModal.default = false;
 const app = createApp(App);
 
 app.use(ElementIcons);
+app.use(i18n);
 app.use(router);
 app.use(store);
 app.use(plugins);

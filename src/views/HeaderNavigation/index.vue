@@ -6,26 +6,62 @@
     </div>
     <div class="tabs">
       <div @click="handleClick(item.name)" :class="`items ${item.name === active ? 'active' : ''}`" v-for="(item, index) in menus" :key="index">
-        {{ item.name }}<el-icon class="dropdown-icon" v-if="item.hasArrow"><ArrowDownBold /></el-icon>
+        {{ item.name }}
       </div>
     </div>
+    <el-dropdown trigger="click" @command="handleLanguageChange">
+      <div class="lang-select--style">{{ langT }}</div>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item v-for="(item, index) in langList" :key="index" :disabled="appStore.language === item.value" :command="item.value">{{
+            item.name
+          }}</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 
 <script setup lang="ts">
-const menus = [
-  { name: '首页' },
-  { name: '游戏资讯' },
-  { name: '数据中心' },
-  { name: '体育赛事' },
-  { name: '关于我们' },
-  { name: 'APP下载' },
-  { name: '简体中文', hasArrow: true }
+import { useI18n } from 'vue-i18n';
+import { useAppStore } from '@/store/modules/app';
+const langT = ref('中文简体');
+const { t, locale } = useI18n();
+const appStore = useAppStore();
+const langList = [
+  { name: '中文简体', value: 'zh-cn' },
+  { name: '中文繁体', value: 'zh-tw' },
+  { name: '英语', value: 'en' },
+  { name: '马来语', value: 'en-my' },
+  { name: '越南语', value: 'vi' },
+  { name: '印尼语', value: 'in-id' },
+  { name: '泰语', value: 'th' },
+  { name: '葡萄牙语', value: 'pt-br' }
 ];
-const active = ref('首页');
+const menus = computed(() => [
+  { name: t('nav.home') },
+  { name: t('nav.news') },
+  { name: t('nav.dataCenter') },
+  { name: t('nav.sports') },
+  { name: t('nav.about') },
+  { name: t('nav.downloadApp') }
+]);
+
+const active = ref('');
+watchEffect(() => {
+  if (!active.value) {
+    active.value = t('nav.home');
+  }
+});
 
 const handleClick = (name: string) => {
   active.value = name;
+};
+
+const handleLanguageChange = (lang: string) => {
+  langT.value = langList.find((item) => item.value === lang)?.name;
+  locale.value = lang;
+  appStore.changeLanguage(lang);
 };
 </script>
 
@@ -104,5 +140,10 @@ const handleClick = (name: string) => {
   color: #333333;
   font-size: 12px;
   margin-left: 6px;
+}
+.lang-select--style {
+  font-size: 18px;
+  line-height: 50px;
+  cursor: pointer;
 }
 </style>

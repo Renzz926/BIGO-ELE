@@ -8,7 +8,7 @@
               <div class="btn"></div>
             </div>
             <div class="mask"></div>
-            <div class="canyu">立即参与</div>
+            <div class="canyu">{{ t('banner.joinNow') }}</div>
           </div>
         </el-carousel-item>
       </el-carousel>
@@ -17,20 +17,20 @@
       <div class="game-list-container">
         <div class="game-category-header">
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/RJ5tS7maHbMAAAAAQBAAAAgAejH3AQBr/original" class="category-icon" />
-          <span class="category-title"> 热门游戏 </span>
+          <span class="category-title"> {{ t('games.hot') }} </span>
         </div>
         <div class="game-item-container">
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/oEOnRb1b6BkAAAAAQOAAAAgAejH3AQBr/original" class="game-thumbnail" />
           <div class="game-card-info">
             <div class="game-card-title">GREEDY</div>
-            <span class="game-card-description"> 食物主题轮盘游戏 </span>
+            <span class="game-card-description"> {{ t('games.greedyDesc') }} </span>
           </div>
         </div>
         <div class="game-item-container">
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/cZ5NSIMYpL0AAAAAQNAAAAgAejH3AQBr/original" class="game-card-image" />
           <span class="game-card-info">
             <div class="game-card-title">CATOR DOG</div>
-            <span class="game-card-description"> 动物拳击对战游戏 </span>
+            <span class="game-card-description"> {{ t('games.catorDogDesc') }} </span>
             <div />
           </span>
         </div>
@@ -38,14 +38,14 @@
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/5tQaQYerlzwAAAAAQMAAAAgAejH3AQBr/original" class="game-thumbnail" />
           <span class="game-card-info">
             <div class="game-card-title">Ele-Family Games</div>
-            <span class="game-card-description"> 足球家庭竞技游戏 </span>
+            <span class="game-card-description"> {{ t('games.eleFamilyDesc') }} </span>
             <div />
           </span>
         </div>
         <div class="download-section-container">
           <div class="game-category-header">
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/QLIoRbYUQQ8AAAAAPVAAAAgAejH3AQBr/original" class="download-icon" />
-            <span class="category-title"> 下载链接 </span>
+            <span class="category-title"> {{ t('download.links') }} </span>
           </div>
           <div class="platform-icons-container">
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/zhE_Q6H5JsEAAAAAQVAAAAgAejH3AQBr/original" class="platform-icon-first" />
@@ -58,8 +58,10 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {};
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

@@ -3,8 +3,8 @@
     <div class="lottery-header">
       <div class="headerBg"></div>
       <span class="lottery-status-label">
-        <span class="lottery-status-text">开奖</span>
-        <span class="result-status-text">结果</span>
+        <span class="lottery-status-text">{{ t('lottery.open') }}</span>
+        <span class="result-status-text">{{ t('lottery.result') }}</span>
       </span>
     </div>
     <div class="lottery-main-content">
@@ -45,17 +45,17 @@
               <span class="result-game-name-third"> Ele-Family Games </span>
             </div>
           </div>
-          <span class="latest-result-text"> GREEDY最新开奖结果 </span>
+          <span class="latest-result-text"> {{ t('lottery.greedyLatest') }} </span>
           <div class="lottery-header">
-            <span class="update-time-prefix"> （最后更新： </span>
-            <span class="update-time-value"> 2025年10月11日9:05) </span>
+            <span class="update-time-prefix"> {{ t('lottery.lastUpdatePrefix') }} </span>
+            <span class="update-time-value"> {{ t('lottery.lastUpdateValue') }} </span>
           </div>
           <div class="result-table-header">
-            <span class="issue-number-header"> 期号 </span>
-            <span class="draw-time-header"> 开奖时间 </span>
-            <span class="draw-result-header"> 开奖结果 </span>
-            <span class="multiplier-header"> 倍率 </span>
-            <span class="status-header"> 状态 </span>
+            <span class="issue-number-header"> {{ t('lottery.issueNo') }} </span>
+            <span class="draw-time-header"> {{ t('lottery.drawTime') }} </span>
+            <span class="draw-result-header"> {{ t('lottery.resultCol') }} </span>
+            <span class="multiplier-header"> {{ t('common.multiplier') }} </span>
+            <span class="status-header"> {{ t('common.status') }} </span>
           </div>
           <div class="result-table-row">
             <div class="previous-page-icon"></div>
@@ -63,9 +63,9 @@
               <span class="issue-number-second"> G20230512-001 </span>
               <span class="draw-time"> 15:30:22 </span>
               <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/wC5YSb7hRQkAAAAAQDAAAAgAejH3AQBr/original" class="draw-result-image" />
-              <span class="draw-result-text"> 鸡腿 </span>
+              <span class="draw-result-text"> {{ t('food.chickenLeg') }} </span>
               <span class="multiplier-value"> 2.45X </span>
-              <a class="result-status-link"> 已开奖 </a>
+              <a class="result-status-link"> {{ t('lottery.opened') }} </a>
             </div>
             <div class="next-page-icon"></div>
           </div>
@@ -73,17 +73,17 @@
             <span class="issue-number-second"> G20230512-002 </span>
             <span class="draw-time-second"> 15:30:22 </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3NZVSIShhVMAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
-            <span class="draw-result-text-second"> 烤串 </span>
+            <span class="draw-result-text-second"> {{ t('food.skewer') }} </span>
             <span class="multiplier-value-second"> 3.20X </span>
-            <a class="result-status-link"> 已开奖 </a>
+            <a class="result-status-link"> {{ t('lottery.opened') }} </a>
           </div>
           <div class="result-table-row-third">
             <span class="issue-number-second"> G20230512-003 </span>
             <span class="draw-time-third"> 15:30:22 </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Fd2IQKf17YsAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
-            <span class="draw-result-text-second"> 热狗 </span>
+            <span class="draw-result-text-second"> {{ t('food.hotdog') }} </span>
             <span class="multiplier-value"> 1.80X </span>
-            <a class="result-status-link-third"> 已开奖 </a>
+            <a class="result-status-link-third"> {{ t('lottery.opened') }} </a>
           </div>
         </div>
       </div>
@@ -92,12 +92,10 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {};
-  }
-};
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

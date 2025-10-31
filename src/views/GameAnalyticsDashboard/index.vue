@@ -8,21 +8,21 @@
               <div class="icon-and-text-group">
                 <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/CgeeSrHpKhQAAAAAO9AAAAgAejH3AQBr/original" class="header-icon" />
                 <div class="text-group-vertical">
-                  <span class="section-title"> 数据分析 </span>
-                  <span class="section-subtitle"> 游戏趋势与记录 </span>
+                  <span class="section-title"> {{ t('analytics.title') }} </span>
+                  <span class="section-subtitle"> {{ t('analytics.subtitle') }} </span>
                 </div>
               </div>
               <div class="icon-and-text-group">
-                <span class="link-text"> 查看完整数据 </span>
+                <span class="link-text"> {{ t('analytics.viewFull') }} </span>
                 <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/nQcdQb7liHEAAAAAG2AAAAgAejH3AQBr/original" class="arrow-icon" />
               </div>
             </div>
             <div class="column-headers-row">
-              <span class="time-header"> 时间 </span>
-              <span class="game-header"> 游戏 </span>
-              <span class="choice-header"> 选择 </span>
-              <span class="multiplier-header"> 倍率 </span>
-              <span class="result-header"> 结果 </span>
+              <span class="time-header"> {{ t('analytics.time') }} </span>
+              <span class="game-header"> {{ t('analytics.game') }} </span>
+              <span class="choice-header"> {{ t('analytics.choice') }} </span>
+              <span class="multiplier-header"> {{ t('common.multiplier') }} </span>
+              <span class="result-header"> {{ t('common.result') }} </span>
             </div>
           </div>
           <div class="game-record-row">
@@ -32,18 +32,18 @@
               <span class="game-name"> GREEDY </span>
             </div>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/canET4LhJUsAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />
-            <span class="player-choice"> 烤串 </span>
+            <span class="player-choice"> {{ t('food.skewer') }} </span>
             <span class="multiplier-value"> 2.45X </span>
-            <a class="result-status-win"> 胜利 </a>
+            <a class="result-status-win"> {{ t('common.win') }} </a>
           </div>
           <div class="game-record-row-alt">
             <span class="record-time-alt"> 15:30 </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/L2wQRa0KZrAAAAAAIsAAAAgAejH3AQBr/original" class="game-icon-alt" />
             <span class="game-name-alt"> CAT OR DOG </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/D2uuQa_7ZHUAAAAAQFAAAAgAejH3AQBr/original" class="choice-icon-alt" />
-            <span class="player-choice-alt"> 猫 </span>
+            <span class="player-choice-alt"> {{ t('common.cat') }} </span>
             <span class="multiplier-value-alt"> 3.20X </span>
-            <a class="result-status-win"> 胜利 </a>
+            <a class="result-status-win"> {{ t('common.win') }} </a>
           </div>
         </div>
         <div class="game-record-row-third">
@@ -57,7 +57,7 @@
             <span class="player-choice"> Alex </span>
           </div>
           <span class="multiplier-value-third"> 1.80X </span>
-          <span class="result-status-lose"> 失败 </span>
+          <span class="result-status-lose"> {{ t('common.lose') }} </span>
         </div>
         <div class="game-record-row-fourth">
           <span class="record-time"> 15:30 </span>
@@ -66,7 +66,7 @@
             <span class="game-name"> GREEDY </span>
           </div>
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Zli2R5uvDTkAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />
-          <span class="player-choice"> 热狗 </span>
+          <span class="player-choice"> {{ t('food.hotdog') }} </span>
           <span class="multiplier-value-fourth"> 2.45X </span>
           <a class="result-status-win"> 胜利 </a>
         </div>
@@ -75,33 +75,33 @@
         <div class="strategy-header-group">
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/yfo9RJjmwPcAAAAAJ3AAAAgAejH3AQBr/original" class="strategy-icon" />
           <div class="text-group-vertical">
-            <span class="section-title"> 热门攻略 </span>
-            <span class="strategy-subtitle"> 游戏技巧与策略 </span>
+            <span class="section-title"> {{ t('strategy.title') }} </span>
+            <span class="strategy-subtitle"> {{ t('strategy.subtitle') }} </span>
           </div>
         </div>
         <div class="strategy-list">
           <div class="strategy-item">
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/MY-DRoKYKaQAAAAAQCAAAAgAejH3AQBr/original" class="strategy-game-icon" />
-            <span class="strategy-item-title"> GREEDY食物选择策略 </span>
+            <span class="strategy-item-title"> {{ t('strategy.greedyFood') }} </span>
           </div>
           <div class="strategy-item-alt">
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/SVBfTo8crkoAAAAAQCAAAAgAejH3AQBr/original" class="strategy-game-icon" />
-            <span class="strategy-item-title"> CAT OR DOG 倍率分析 </span>
+            <span class="strategy-item-title"> {{ t('strategy.catorDogRate') }} </span>
           </div>
           <div class="strategy-item-third">
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/L-KgRLlptFsAAAAAQCAAAAgAejH3AQBr/original" class="strategy-game-icon" />
-            <span class="strategy-item-title"> Ele-Family Games 最佳阵容 </span>
+            <span class="strategy-item-title"> {{ t('strategy.eleFamilyLineup') }} </span>
           </div>
           <div class="strategy-item-fourth">
             <img
               src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3gYXSLwxnB8AAAAAQCAAAAgAejH3AQBr/original"
               class="strategy-game-icon-fourth"
             />
-            <span class="strategy-item-title-fourth"> Ele-Family Games 最佳人选 </span>
+            <span class="strategy-item-title-fourth"> {{ t('strategy.eleFamilyCandidates') }} </span>
           </div>
         </div>
         <div class="game-record-row-fourth">
-          <span class="link-text"> 查看全部 </span>
+          <span class="link-text"> {{ t('common.viewAll') }} </span>
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/n8KER6Ge3bYAAAAAG4AAAAgAejH3AQBr/original" class="view-all-arrow-icon" />
         </div>
       </div>
@@ -109,8 +109,10 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {};
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">

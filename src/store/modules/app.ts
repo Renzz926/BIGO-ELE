@@ -1,6 +1,11 @@
 import zhCN from 'element-plus/es/locale/lang/zh-cn';
-import enUS from 'element-plus/es/locale/lang/en';
-import itIT from 'element-plus/es/locale/lang/it';
+import zhTW from 'element-plus/es/locale/lang/zh-tw';
+import en from 'element-plus/es/locale/lang/en';
+import ms from 'element-plus/es/locale/lang/en';
+import vi from 'element-plus/es/locale/lang/vi';
+import id from 'element-plus/es/locale/lang/id';
+import th from 'element-plus/es/locale/lang/th';
+import ptBR from 'element-plus/es/locale/lang/pt-br';
 import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
 import { ref, reactive, computed } from 'vue';
@@ -16,11 +21,16 @@ export const useAppStore = defineStore('app', () => {
   const size = useStorage<'large' | 'default' | 'small'>('size', 'default');
 
   // 语言
-  const language = useStorage('language', 'zh_CN');
+  const language = useStorage('language', 'zh_cn');
   const languageObj: any = {
-    en_US: enUS,
-    zh_CN: zhCN,
-    it_IT: itIT
+    'zh_cn': zhCN,
+    'zh_tw': zhTW,
+    en: en,
+    'en_my': ms,
+    vi: vi,
+    'in_id': id,
+    th: th,
+    'pt_br': ptBR
   };
   const locale = computed(() => {
     return languageObj[language.value];

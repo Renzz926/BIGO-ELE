@@ -1,5 +1,10 @@
 export enum LanguageEnum {
-  zh_CN = 'zh_CN',
-  en_US = 'en_US',
-  it_IT = 'it_IT'
+  'zh_cn' = 'zh_cn',
+  'zh_tw' = 'zh_tw',
+  en = 'en',
+  'en_my' = 'en_my',
+  vi = 'vi',
+  'in_id' = 'in_id',
+  th = 'th',
+  'pt_br' = 'pt_br'
 }

@@ -3,35 +3,31 @@
     <div class="lottery-header">
       <div class="headerBg"></div>
       <span class="lottery-status-label">
-        <span class="lottery-status-text">游戏</span>
-        <span class="result-status-text">演示</span>
+        <span class="lottery-status-text">{{ t('demo.game') }}</span>
+        <span class="result-status-text">{{ t('demo.demo') }}</span>
       </span>
     </div>
     <div class="game-actions-section">
       <div class="action-button-container">
         <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/sg64T60Jbq8AAAAAXxAAAAgAejH3AQBr/original" class="action-icon" />
-        <ElButton size="large" round class="try-play-button"> 前往试玩 </ElButton>
+        <ElButton size="large" round class="try-play-button"> {{ t('demo.tryNow') }} </ElButton>
       </div>
       <div class="action-button-container">
         <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/AQCeToEbzZMAAAAAeRAAAAgAejH3AQBr/original" class="action-icon-2" />
-        <ElButton size="large" round class="try-play-button"> 前往试玩 </ElButton>
+        <ElButton size="large" round class="try-play-button"> {{ t('demo.tryNow') }} </ElButton>
       </div>
       <div class="action-button-container">
         <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/SzrGTKpyeB4AAAAAYXAAAAgAejH3AQBr/original" class="action-icon-3" />
-        <ElButton size="large" round class="try-play-button-3"> 前往试玩 </ElButton>
+        <ElButton size="large" round class="try-play-button-3"> {{ t('demo.tryNow') }} </ElButton>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      rateModel1: 2
-    };
-  }
-};
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">
