@@ -17,58 +17,80 @@
                 <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/nQcdQb7liHEAAAAAG2AAAAgAejH3AQBr/original" class="arrow-icon" />
               </div>
             </div>
+          </div>
+          <div class="list">
             <div class="column-headers-row">
-              <span class="time-header"> {{ t('analytics.time') }} </span>
-              <span class="game-header"> {{ t('analytics.game') }} </span>
-              <span class="choice-header"> {{ t('analytics.choice') }} </span>
-              <span class="multiplier-header"> {{ t('common.multiplier') }} </span>
-              <span class="result-header"> {{ t('common.result') }} </span>
+              <span class="item-header"> {{ t('analytics.time') }} </span>
+              <span class="item-header"> {{ t('analytics.game') }} </span>
+              <span class="item-header"> {{ t('analytics.choice') }} </span>
+              <span class="item-header"> {{ t('common.multiplier') }} </span>
+              <span class="item-header"> {{ t('common.result') }} </span>
+            </div>
+            <div class="column-headers-row co" style="margin-top: 12px">
+              <div class="item time">15:30</div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/YIztQZvCEzgAAAAAJVAAAAgAejH3AQBr/original" class="game-icon-small" />
+                <span class="game-name"> GREEDY </span>
+              </div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/canET4LhJUsAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                  t('food.skewer')
+                }}
+              </div>
+              <div class="item">2.45X</div>
+              <div class="item">
+                <a class="result-status-win"> {{ t('common.win') }} </a>
+              </div>
+            </div>
+            <div class="column-headers-row" style="margin-top: 0px">
+              <div class="item time">15:30</div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/L2wQRa0KZrAAAAAAIsAAAAgAejH3AQBr/original" class="game-icon-small" />
+                <span class="game-name"> CAT OR DOG </span>
+              </div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/D2uuQa_7ZHUAAAAAQFAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                  t('common.cat')
+                }}
+              </div>
+              <div class="item">3.20X</div>
+              <div class="item">
+                <a class="result-status-win"> {{ t('common.win') }} </a>
+              </div>
+            </div>
+            <div class="column-headers-row co" style="margin-top: 0px">
+              <div class="item time">15:30</div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/JDCqS4T34uMAAAAAOfAAAAgAejH3AQBr/original" class="game-icon-small" />
+                <span class="game-name"> Ele-Family Games </span>
+              </div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3jZpTZyC_d8AAAAAQGAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                  t('food.skewer')
+                }}
+              </div>
+              <div class="item">1.80X</div>
+              <div class="item">
+                <a class="result-status-lose"> {{ t('common.lose') }} </a>
+              </div>
+            </div>
+            <div class="column-headers-row" style="margin-top: 0px">
+              <div class="item time">15:30</div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/onopTq66jG4AAAAAH2AAAAgAejH3AQBr/original" class="game-icon-small" />
+                <span class="game-name"> GREEDY </span>
+              </div>
+              <div class="item" style="display: flex; align-items: center; justify-content: center">
+                <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Zli2R5uvDTkAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                  t('food.hotdog')
+                }}
+              </div>
+              <div class="item">2.45X</div>
+              <div class="item">
+                <a class="result-status-win"> {{ t('common.win') }} </a>
+              </div>
             </div>
           </div>
-          <div class="game-record-row">
-            <span class="record-time"> 15:30 </span>
-            <div class="game-name-group">
-              <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/YIztQZvCEzgAAAAAJVAAAAgAejH3AQBr/original" class="game-icon-small" />
-              <span class="game-name"> GREEDY </span>
-            </div>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/canET4LhJUsAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />
-            <span class="player-choice"> {{ t('food.skewer') }} </span>
-            <span class="multiplier-value"> 2.45X </span>
-            <a class="result-status-win"> {{ t('common.win') }} </a>
-          </div>
-          <div class="game-record-row-alt">
-            <span class="record-time-alt"> 15:30 </span>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/L2wQRa0KZrAAAAAAIsAAAAgAejH3AQBr/original" class="game-icon-alt" />
-            <span class="game-name-alt"> CAT OR DOG </span>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/D2uuQa_7ZHUAAAAAQFAAAAgAejH3AQBr/original" class="choice-icon-alt" />
-            <span class="player-choice-alt"> {{ t('common.cat') }} </span>
-            <span class="multiplier-value-alt"> 3.20X </span>
-            <a class="result-status-win"> {{ t('common.win') }} </a>
-          </div>
-        </div>
-        <div class="game-record-row-third">
-          <div class="icon-and-text-group">
-            <span class="record-time-third"> 15:30 </span>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/JDCqS4T34uMAAAAAOfAAAAgAejH3AQBr/original" class="game-icon-third" />
-            <span class="game-name-third"> Ele-Family Games </span>
-          </div>
-          <div class="player-group">
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3jZpTZyC_d8AAAAAQGAAAAgAejH3AQBr/original" class="player-icon" />
-            <span class="player-choice"> Alex </span>
-          </div>
-          <span class="multiplier-value-third"> 1.80X </span>
-          <span class="result-status-lose"> {{ t('common.lose') }} </span>
-        </div>
-        <div class="game-record-row-fourth">
-          <span class="record-time"> 15:30 </span>
-          <div class="game-name-group">
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/onopTq66jG4AAAAAH2AAAAgAejH3AQBr/original" class="game-icon-fourth" />
-            <span class="game-name"> GREEDY </span>
-          </div>
-          <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Zli2R5uvDTkAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />
-          <span class="player-choice"> {{ t('food.hotdog') }} </span>
-          <span class="multiplier-value-fourth"> 2.45X </span>
-          <a class="result-status-win"> {{ t('common.win') }} </a>
         </div>
       </div>
       <div class="strategy-section">
@@ -116,6 +138,8 @@ const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">
+.list {
+}
 .wrapper-6 {
   width: 100%;
   background-color: #f7f9fa;
@@ -208,45 +232,27 @@ const { t } = useI18n();
 }
 
 .column-headers-row {
-  margin-top: 25px;
-  align-self: center;
+  margin-top: 30px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-betaween;
+  .item-header {
+    color: #676767;
+    flex: 1;
+    font-size: 14px;
+    text-align: center;
+  }
+  .item {
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    height: 72px;
+    line-height: 72px;
+  }
 }
-
-.time-header {
-  color: #676767;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-.game-header {
-  color: #676767;
-  font-size: 13px;
-  margin-left: 110px;
-  white-space: nowrap;
-}
-
-.choice-header {
-  color: #676767;
-  font-size: 13px;
-  margin-left: 185px;
-  white-space: nowrap;
-}
-
-.multiplier-header {
-  color: #676767;
-  font-size: 13px;
-  margin-left: 106px;
-  white-space: nowrap;
-}
-
-.result-header {
-  color: #676767;
-  font-size: 13px;
-  margin-left: 76px;
-  white-space: nowrap;
+.co {
+  background-color: #fff9f0;
+  border-radius: 4px;
 }
 
 .game-record-row {
@@ -263,7 +269,7 @@ const { t } = useI18n();
 
 .record-time {
   color: #333333;
-  font-size: 13px;
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -291,8 +297,8 @@ const { t } = useI18n();
 .choice-icon {
   border-radius: 17px;
   flex-shrink: 0;
+  margin-right: 8px;
   width: 32px;
-  margin-left: 145px;
   height: 32px;
 }
 
@@ -313,7 +319,6 @@ const { t } = useI18n();
 .result-status-win {
   color: #ff5b2b;
   font-size: 14px;
-  margin-left: 68px;
   white-space: nowrap;
 }
 
@@ -327,8 +332,7 @@ const { t } = useI18n();
 
 .record-time-alt {
   color: #333333;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -342,7 +346,7 @@ const { t } = useI18n();
 
 .game-name-alt {
   color: #333333;
-  font-size: 13px;
+  font-size: 14px;
   margin-left: 10px;
   white-space: nowrap;
 }
@@ -427,7 +431,6 @@ const { t } = useI18n();
 .result-status-lose {
   color: #333333;
   font-size: 14px;
-  margin-left: 75px;
   white-space: nowrap;
 }
 

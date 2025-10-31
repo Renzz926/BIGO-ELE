@@ -50,40 +50,63 @@
             <span class="update-time-prefix"> {{ t('lottery.lastUpdatePrefix') }} </span>
             <span class="update-time-value"> {{ t('lottery.lastUpdateValue') }} </span>
           </div>
-          <div class="result-table-header">
-            <span class="issue-number-header"> {{ t('lottery.issueNo') }} </span>
-            <span class="draw-time-header"> {{ t('lottery.drawTime') }} </span>
-            <span class="draw-result-header"> {{ t('lottery.resultCol') }} </span>
-            <span class="multiplier-header"> {{ t('common.multiplier') }} </span>
-            <span class="status-header"> {{ t('common.status') }} </span>
-          </div>
-          <div class="result-table-row">
-            <div class="previous-page-icon"></div>
-            <div class="result-table-cell">
-              <span class="issue-number-second">G20230512-001</span>
-              <span class="draw-time"> 15:30:22 </span>
-              <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/wC5YSb7hRQkAAAAAQDAAAAgAejH3AQBr/original" class="draw-result-image" />
-              <span class="draw-result-text"> {{ t('food.chickenLeg') }} </span>
-              <span class="multiplier-value"> 2.45X </span>
-              <a class="result-status-link"> {{ t('lottery.opened') }} </a>
+          <div class="box" style="display: flex">
+            <div class="left" style="padding-top: 20px"><div class="previous-page-icon"></div></div>
+            <div class="list" style="flex: 1; padding: 0 20px">
+              <div class="column-headers-row">
+                <span class="item-header"> {{ t('lottery.issueNo') }} </span>
+                <span class="item-header"> {{ t('lottery.drawTime') }} </span>
+                <span class="item-header"> {{ t('lottery.resultCol') }} </span>
+                <span class="item-header"> {{ t('common.multiplier') }} </span>
+                <span class="item-header"> {{ t('common.status') }} </span>
+              </div>
+              <div class="column-headers-row co" style="margin-top: 12px">
+                <div class="item time">G20230512-001</div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <span class="game-name" style="font-weight: 400"> 15:30:22 </span>
+                </div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/wC5YSb7hRQkAAAAAQDAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                    t('food.chickenLeg')
+                  }}
+                </div>
+                <div class="item">3.20X</div>
+                <div class="item">
+                  <a class="result-status-win"> {{ t('lottery.opened') }} </a>
+                </div>
+              </div>
+              <div class="column-headers-row" style="margin-top: 12px">
+                <div class="item time">G20230512-002</div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <span class="game-name" style="font-weight: 400"> 15:30:22 </span>
+                </div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3NZVSIShhVMAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                    t('food.skewer')
+                  }}
+                </div>
+                <div class="item">3.20X</div>
+                <div class="item">
+                  <a class="result-status-win"> {{ t('lottery.opened') }} </a>
+                </div>
+              </div>
+              <div class="column-headers-row co" style="margin-top: 12px">
+                <div class="item time">G20230512-003</div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <span class="game-name" style="font-weight: 400"> 15:30:22 </span>
+                </div>
+                <div class="item" style="display: flex; align-items: center; justify-content: center">
+                  <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Fd2IQKf17YsAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />{{
+                    t('food.hotdog')
+                  }}
+                </div>
+                <div class="item">3.20X</div>
+                <div class="item">
+                  <a class="result-status-win"> {{ t('lottery.opened') }} </a>
+                </div>
+              </div>
             </div>
-            <div class="next-page-icon"></div>
-          </div>
-          <div class="result-table-row-second">
-            <span class="issue-number-second">G20230512-002</span>
-            <span class="draw-time-second"> 15:30:22 </span>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3NZVSIShhVMAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
-            <span class="draw-result-text-second"> {{ t('food.skewer') }} </span>
-            <span class="multiplier-value-second"> 3.20X </span>
-            <a class="result-status-link"> {{ t('lottery.opened') }} </a>
-          </div>
-          <div class="result-table-row-third">
-            <span class="issue-number-second">G20230512-003</span>
-            <span class="draw-time-third"> 15:30:22 </span>
-            <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Fd2IQKf17YsAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
-            <span class="draw-result-text-second"> {{ t('food.hotdog') }} </span>
-            <span class="multiplier-value"> 1.80X </span>
-            <a class="result-status-link-third"> {{ t('lottery.opened') }} </a>
+            <div class="right" style="padding-top: 20px"><div class="next-page-icon"></div></div>
           </div>
         </div>
       </div>
@@ -104,7 +127,45 @@ const { t } = useI18n();
   background-color: #fff5e6;
   padding: 40px 0;
 }
-
+.column-headers-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-betaween;
+  .item-header {
+    color: #676767;
+    flex: 1;
+    font-size: 14px;
+    text-align: center;
+  }
+  .item {
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    height: 72px;
+    line-height: 72px;
+  }
+}
+.co {
+  background-color: #f7f8f9;
+  border-radius: 4px;
+}
+.choice-icon {
+  border-radius: 17px;
+  flex-shrink: 0;
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+}
+.result-status-win {
+  color: #ff5b2b;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.result-status-lose {
+  color: #333333;
+  font-size: 14px;
+  white-space: nowrap;
+}
 .lottery-header {
   align-self: center;
   display: flex;
@@ -128,7 +189,12 @@ const { t } = useI18n();
 .header-progress {
   width: 112px;
 }
-
+.game-icon-small {
+  border-radius: 6px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
 .lottery-status-label {
   margin-left: 12px;
   white-space: nowrap;
@@ -446,7 +512,6 @@ const { t } = useI18n();
 .previous-page-icon {
   width: 28px;
   height: 28px;
-  margin-top: 5px;
   background: url('../../assets/images/icon_arrow.png') no-repeat center;
   transform: rotate(180deg);
   background-size: 100% 100%;
@@ -502,7 +567,6 @@ const { t } = useI18n();
 
 .next-page-icon {
   width: 28px;
-  margin-left: 50px;
   height: 28px;
   margin-top: 6px;
   background: url('../../assets/images/icon_arrow.png') no-repeat center;
