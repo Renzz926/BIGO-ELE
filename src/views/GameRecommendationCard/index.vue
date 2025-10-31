@@ -5,8 +5,10 @@
         <el-carousel-item v-for="item in 4" :key="item">
           <div class="banneritem">
             <div class="text">
-              <div class="btn"></div>
+              {{ t('recommend.title') }}
+              <div class="btn">{{ t('recommend.limited') }}</div>
             </div>
+            <div class="text1">{{ t('recommend.desc') }}</div>
             <div class="mask"></div>
             <div class="canyu">{{ t('banner.joinNow') }}</div>
           </div>
@@ -103,22 +105,33 @@ const { t } = useI18n();
     background-size: cover;
     .text {
       position: absolute;
-      bottom: 56px;
+      bottom: 88px;
       left: 61px;
-      width: 555px;
-      height: 66px;
-      background: url('../../assets/images/text.png') no-repeat center;
-      background-size: 100% 100%;
       z-index: 3;
+      font-size: 30px;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      align-items: flex-start;
       .btn {
-        position: absolute;
-        top: 0px;
-        right: 155px;
-        width: 72px;
+        line-height: 20px;
+        padding: 0 22px 0 6px;
+        font-size: 12px;
         height: 20px;
+        margin-top: 6px;
+        margin-left: 12px;
         background: url('../../assets/images/huodong.png') no-repeat center;
         background-size: 100% 100%;
       }
+    }
+    .text1 {
+      position: absolute;
+      bottom: 51px;
+      font-size: 16px;
+      color: #ffffff;
+      left: 61px;
+      max-width: 70%;
+      z-index: 3;
     }
     .mask {
       position: absolute;

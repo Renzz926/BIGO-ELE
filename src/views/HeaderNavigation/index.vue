@@ -8,36 +8,41 @@
       <div @click="handleClick(item.name)" :class="`items ${item.name === active ? 'active' : ''}`" v-for="(item, index) in menus" :key="index">
         {{ item.name }}
       </div>
+      <div class="items">
+        <el-dropdown trigger="click" @command="handleLanguageChange">
+          <div class="lang-select--style">
+            {{ langT }}<el-icon><ArrowDown /></el-icon>
+          </div>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item v-for="(item, index) in langList" :key="index" :disabled="appStore.language === item.value" :command="item.value">{{
+                t(`langNames.${item.value}`)
+              }}</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+      </div>
     </div>
-    <el-dropdown trigger="click" @command="handleLanguageChange">
-      <div class="lang-select--style">{{ langT }}</div>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item v-for="(item, index) in langList" :key="index" :disabled="appStore.language === item.value" :command="item.value">{{
-            item.name
-          }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { useAppStore } from '@/store/modules/app';
-const langT = ref('中文简体');
 const { t, locale } = useI18n();
 const appStore = useAppStore();
 const langList = [
-  { name: '中文简体', value: 'zh-cn' },
-  { name: '中文繁体', value: 'zh-tw' },
-  { name: '英语', value: 'en' },
-  { name: '马来语', value: 'en-my' },
-  { name: '越南语', value: 'vi' },
-  { name: '印尼语', value: 'in-id' },
-  { name: '泰语', value: 'th' },
-  { name: '葡萄牙语', value: 'pt-br' }
+  { value: 'zh_cn' },
+  { value: 'zh_tw' },
+  { value: 'en' },
+  { value: 'en_my' },
+  { value: 'vi' },
+  { value: 'in_id' },
+  { value: 'th' },
+  { value: 'pt_br' }
 ];
+const currentLang = window.localStorage.getItem('language') || 'zh_cn';
+const langT = ref(t(`langNames.${currentLang}`));
 const menus = computed(() => [
   { name: t('nav.home') },
   { name: t('nav.news') },
@@ -59,9 +64,9 @@ const handleClick = (name: string) => {
 };
 
 const handleLanguageChange = (lang: string) => {
-  langT.value = langList.find((item) => item.value === lang)?.name;
   locale.value = lang;
   appStore.changeLanguage(lang);
+  langT.value = t(`langNames.${lang}`);
 };
 </script>
 
@@ -89,7 +94,6 @@ const handleLanguageChange = (lang: string) => {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: Alibaba PuHuiTi 3;
   font-weight: 400;
   font-size: 16px;
   justify-content: space-between;
@@ -142,8 +146,10 @@ const handleLanguageChange = (lang: string) => {
   margin-left: 6px;
 }
 .lang-select--style {
-  font-size: 18px;
-  line-height: 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  color: #000;
 }
 </style>

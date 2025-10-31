@@ -11,6 +11,16 @@ export default {
     downloadApp: 'APP下載',
     simplifiedChinese: '簡體中文'
   },
+  langNames: {
+    zh_cn: '中文簡體',
+    zh_tw: '中文繁體',
+    en: '英語',
+    en_my: '馬來語',
+    vi: '越南語',
+    in_id: '印尼語',
+    th: '泰語',
+    pt_br: '葡萄牙語'
+  },
   analytics: {
     title: '數據分析',
     subtitle: '遊戲趨勢與記錄',
@@ -43,6 +53,11 @@ export default {
   },
   banner: {
     joinNow: '立即參與'
+  },
+  recommend: {
+    title: 'GREEDY 新賽季開啟',
+    limited: '限時活動',
+    desc: '全新食物主題輪盤上線，更多倍率獎勵等你來贏！首次登入即送500INR虛擬貨幣'
   },
   games: {
     hot: '熱門遊戲',

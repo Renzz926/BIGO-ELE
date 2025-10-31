@@ -14,24 +14,23 @@ import pt_br from '@/lang/pt-br';
 
 /**
  * 获取当前语言
- * @returns zh-cn|en|it ...
+ * @returns
  */
 export const getLanguage = (): LanguageEnum => {
   const normalizeLanguage = (val?: string): LanguageEnum => {
-    if (!val) return LanguageEnum['zh-cn'];
-    const v = val.replace('_', '-').toLowerCase();
-    if (v === 'zh-cn') return LanguageEnum['zh-cn'];
-    if (v === 'zh-tw') return LanguageEnum['zh-tw'];
-    if (v === 'en' || v === 'en-us') return LanguageEnum.en;
-    if (v === 'en-my') return LanguageEnum['en-my'];
-    if (v === 'vi') return LanguageEnum.vi;
-    if (v === 'in-id' || v === 'id-id') return LanguageEnum['in-id'];
-    if (v === 'th') return LanguageEnum.th;
-    if (v === 'pt-br') return LanguageEnum['pt-br'];
-    return LanguageEnum['zh-cn'];
+    if (!val) return LanguageEnum['zh_cn'];
+    if (val === 'zh_cn') return LanguageEnum['zh_cn'];
+    if (val === 'zh_tw') return LanguageEnum['zh_tw'];
+    if (val === 'en' || val === 'en-us') return LanguageEnum.en;
+    if (val === 'en_my') return LanguageEnum['en_my'];
+    if (val === 'vi') return LanguageEnum.vi;
+    if (val === 'in_id') return LanguageEnum['in_id'];
+    if (val === 'th') return LanguageEnum.th;
+    if (val === 'pt_br') return LanguageEnum['pt_br'];
+    return LanguageEnum['zh_cn'];
   };
 
-  const language = useStorage<string>('language', LanguageEnum['zh-cn']);
+  const language = useStorage<string>('language', LanguageEnum['zh_cn']);
   return normalizeLanguage(language.value);
 };
 
@@ -41,14 +40,14 @@ const i18n = createI18n({
   legacy: false,
   locale: getLanguage(),
   messages: {
-    'zh-cn': zh_cn,
-    'zh-tw': zh_tw,
+    'zh_cn': zh_cn,
+    'zh_tw': zh_tw,
     en: en,
-    'en-my': en_my,
+    'en_my': en_my,
     vi: vi,
-    'in-id': in_id,
+    'in_id': in_id,
     th: th,
-    'pt-br': pt_br
+    'pt_br': pt_br
   }
 });
 

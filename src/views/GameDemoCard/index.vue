@@ -51,10 +51,10 @@ const { t } = useI18n();
   margin-bottom: 40px;
   .headerBg {
     position: absolute;
-    top: calc(50% - 16px);
-    left: calc(50% - 176px);
-    width: 362px;
-    height: 29px;
+    top: calc(50% - 18px);
+    left: calc(50% - 215px);
+    width: 440px;
+    height: 36px;
     background: url('../../assets/images/title_bg.png') no-repeat center;
     background-size: 100% 100%;
   }

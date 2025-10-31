@@ -68,7 +68,7 @@
           <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Zli2R5uvDTkAAAAAQEAAAAgAejH3AQBr/original" class="choice-icon" />
           <span class="player-choice"> {{ t('food.hotdog') }} </span>
           <span class="multiplier-value-fourth"> 2.45X </span>
-          <a class="result-status-win"> 胜利 </a>
+          <a class="result-status-win"> {{ t('common.win') }} </a>
         </div>
       </div>
       <div class="strategy-section">

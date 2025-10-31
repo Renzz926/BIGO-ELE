@@ -34,7 +34,6 @@ const { t } = useI18n();
   color: #ff5b2b;
   background-color: #fff5e6;
   font-size: 16px;
-  white-space: nowrap;
   height: 36px;
   display: flex;
   border-radius: 18px;

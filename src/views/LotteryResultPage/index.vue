@@ -60,7 +60,7 @@
           <div class="result-table-row">
             <div class="previous-page-icon"></div>
             <div class="result-table-cell">
-              <span class="issue-number-second"> G20230512-001 </span>
+              <span class="issue-number-second">G20230512-001</span>
               <span class="draw-time"> 15:30:22 </span>
               <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/wC5YSb7hRQkAAAAAQDAAAAgAejH3AQBr/original" class="draw-result-image" />
               <span class="draw-result-text"> {{ t('food.chickenLeg') }} </span>
@@ -70,7 +70,7 @@
             <div class="next-page-icon"></div>
           </div>
           <div class="result-table-row-second">
-            <span class="issue-number-second"> G20230512-002 </span>
+            <span class="issue-number-second">G20230512-002</span>
             <span class="draw-time-second"> 15:30:22 </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/3NZVSIShhVMAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
             <span class="draw-result-text-second"> {{ t('food.skewer') }} </span>
@@ -78,7 +78,7 @@
             <a class="result-status-link"> {{ t('lottery.opened') }} </a>
           </div>
           <div class="result-table-row-third">
-            <span class="issue-number-second"> G20230512-003 </span>
+            <span class="issue-number-second">G20230512-003</span>
             <span class="draw-time-third"> 15:30:22 </span>
             <img src="https://mdn.alipayobjects.com/fecodex_image/afts/img/Fd2IQKf17YsAAAAAQEAAAAgAejH3AQBr/original" class="draw-result-image" />
             <span class="draw-result-text-second"> {{ t('food.hotdog') }} </span>
@@ -116,10 +116,10 @@ const { t } = useI18n();
   margin-bottom: 40px;
   .headerBg {
     position: absolute;
-    top: calc(50% - 16px);
-    left: calc(50% - 176px);
-    width: 362px;
-    height: 29px;
+    top: calc(50% - 19px);
+    left: calc(50% - 215px);
+    width: 440px;
+    height: 36px;
     background: url('../../assets/images/title_bg.png') no-repeat center;
     background-size: 100% 100%;
   }

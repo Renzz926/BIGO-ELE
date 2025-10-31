@@ -11,6 +11,16 @@ export default {
     downloadApp: 'Tải ứng dụng',
     simplifiedChinese: 'Tiếng Trung Giản thể'
   },
+  langNames: {
+    zh_cn: 'Tiếng Trung giản thể',
+    zh_tw: 'Tiếng Trung phồn thể',
+    en: 'Tiếng Anh',
+    en_my: 'Tiếng Mã Lai',
+    vi: 'Tiếng Việt',
+    in_id: 'Tiếng Indonesia',
+    th: 'Tiếng Thái',
+    pt_br: 'Tiếng Bồ Đào Nha (Brazil)'
+  },
   analytics: {
     title: 'Phân tích dữ liệu',
     subtitle: 'Xu hướng & lịch sử trò chơi',
@@ -42,7 +52,12 @@ export default {
     eleFamilyCandidates: 'Lựa chọn hàng đầu Ele-Family'
   },
   banner: {
-    joinNow: 'Tham gia ngay'
+    joinNow: 'Tham gia'
+  },
+  recommend: {
+    title: 'Mùa giải mới GREEDY bắt đầu',
+    limited: 'Sự kiện giới hạn',
+    desc: 'Roulette chủ đề ẩm thực mới đã ra mắt! Nhiều hệ số hơn đang chờ. Nhận 500 INR xu ảo khi đăng nhập lần đầu.'
   },
   games: {
     hot: 'Trò chơi hot',
@@ -65,7 +80,7 @@ export default {
     lastUpdatePrefix: '(Cập nhật lần cuối: ',
     lastUpdateValue: 'Oct 11, 2025 09:05)',
     issueNo: 'Số kỳ',
-    drawTime: 'Thời gian quay',
+    drawTime: 'Thời gian',
     resultCol: 'Số trúng',
     opened: 'Đã mở'
   }

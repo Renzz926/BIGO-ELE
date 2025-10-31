@@ -12,6 +12,16 @@ export default {
     downloadApp: 'Unduh Aplikasi',
     simplifiedChinese: 'Tionghoa Sederhana'
   },
+  langNames: {
+    zh_cn: 'Tionghoa Sederhana',
+    zh_tw: 'Tionghoa Tradisional',
+    en: 'Inggris',
+    en_my: 'Melayu',
+    vi: 'Vietnam',
+    in_id: 'Indonesia',
+    th: 'Thai',
+    pt_br: 'Portugis (Brasil)'
+  },
   analytics: {
     title: 'Analitik Data',
     subtitle: 'Tren & Riwayat Game',
@@ -43,7 +53,12 @@ export default {
     eleFamilyCandidates: 'Pilihan Teratas Ele-Family'
   },
   banner: {
-    joinNow: 'Gabung Sekarang'
+    joinNow: 'Gabung'
+  },
+  recommend: {
+    title: 'Musim Baru GREEDY Dimulai',
+    limited: 'Acara Terbatas',
+    desc: 'Rolet bertema makanan terbaru telah hadir! Lebih banyak pengganda menanti. Dapatkan 500 INR koin virtual saat login pertama.'
   },
   games: {
     hot: 'Game Populer',
@@ -66,8 +81,8 @@ export default {
     lastUpdatePrefix: '(Pembaruan terakhir: ',
     lastUpdateValue: 'Oct 11, 2025 09:05)',
     issueNo: 'No. Edisi',
-    drawTime: 'Waktu Undian',
-    resultCol: 'Nomor Pemenang',
+    drawTime: 'Waktu',
+    resultCol: 'Nomor Pe',
     opened: 'Dibuka'
   }
 };

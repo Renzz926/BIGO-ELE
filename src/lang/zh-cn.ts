@@ -11,6 +11,16 @@ export default {
     downloadApp: 'APP下载',
     simplifiedChinese: '简体中文'
   },
+  langNames: {
+    zh_cn: '中文简体',
+    zh_tw: '中文繁体',
+    en: '英语',
+    en_my: '马来语',
+    vi: '越南语',
+    in_id: '印尼语',
+    th: '泰语',
+    pt_br: '葡萄牙语'
+  },
   analytics: {
     title: '数据分析',
     subtitle: '游戏趋势与记录',
@@ -43,6 +53,11 @@ export default {
   },
   banner: {
     joinNow: '立即参与'
+  },
+  recommend: {
+    title: 'GREEDY 新赛季开启',
+    limited: '限时活动',
+    desc: '全新食物主题轮盘上线，更多倍率奖励等你来赢！首次登录即送500INR虚拟货币'
   },
   games: {
     hot: '热门游戏',

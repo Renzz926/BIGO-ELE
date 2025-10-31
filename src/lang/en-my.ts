@@ -12,6 +12,16 @@ export default {
     downloadApp: 'Muat Turun Apl',
     simplifiedChinese: 'Cina Ringkas'
   },
+  langNames: {
+    zh_cn: 'Cina Ringkas',
+    zh_tw: 'Cina Tradisional',
+    en: 'Inggeris',
+    en_my: 'Melayu',
+    vi: 'Tiếng Việt',
+    in_id: 'Bahasa Indonesia',
+    th: 'ภาษาไทย',
+    pt_br: 'Portugis (Brasil)'
+  },
   analytics: {
     title: 'Analitik Data',
     subtitle: 'Tren & Rekod Permainan',
@@ -43,7 +53,12 @@ export default {
     eleFamilyCandidates: 'Pilihan Teratas Permainan Ele-Family'
   },
   banner: {
-    joinNow: 'Sertai Sekarang'
+    joinNow: 'Sertai'
+  },
+  recommend: {
+    title: 'Musim Baru GREEDY Bermula',
+    limited: 'Masa Terhad',
+    desc: 'Roulette bertema makanan baharu telah dilancarkan! Lebih banyak pengganda menanti. Dapatkan 500 INR syiling maya pada log masuk pertama.'
   },
   games: {
     hot: 'Permainan Hangat',

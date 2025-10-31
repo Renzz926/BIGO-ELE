@@ -11,6 +11,16 @@ export default {
     downloadApp: 'Baixar App',
     simplifiedChinese: 'Chinês Simplificado'
   },
+  langNames: {
+    zh_cn: 'Chinês Simplificado',
+    zh_tw: 'Chinês Tradicional',
+    en: 'Inglês',
+    en_my: 'Malaio',
+    vi: 'Vietnamita',
+    in_id: 'Indonésio',
+    th: 'Tailandês',
+    pt_br: 'Português (Brasil)'
+  },
   analytics: {
     title: 'Análise de Dados',
     subtitle: 'Tendências e Registros de Jogos',
@@ -42,7 +52,12 @@ export default {
     eleFamilyCandidates: 'Principais Escolhas Ele-Family'
   },
   banner: {
-    joinNow: 'Participar Agora'
+    joinNow: 'Participar'
+  },
+  recommend: {
+    title: 'Nova temporada do GREEDY começou',
+    limited: 'Evento por limitado',
+    desc: 'A nova roleta com tema de comida está no ar! Mais multiplicadores aguardam. Ganhe 500 INR em moedas virtuais no primeiro login.'
   },
   games: {
     hot: 'Jogos em Alta',
@@ -64,8 +79,8 @@ export default {
     greedyLatest: 'Resultados Mais Recentes do GREEDY',
     lastUpdatePrefix: '(Última atualização: ',
     lastUpdateValue: 'Oct 11, 2025 09:05)',
-    issueNo: 'Nº do Concurso',
-    drawTime: 'Hora do Sorteio',
+    issueNo: 'Nº do',
+    drawTime: 'Hora do',
     resultCol: 'Nº Premiado',
     opened: 'Aberto'
   }
